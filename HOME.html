@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+       background-color:coral;
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 40px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+</style>
+</head>
+<body>
+
+<button onclick="goBack()">Back</button>
+
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+
+<center><h1><font size="12" face="ALGERIAN">Welcome to my Portfolio</font></h1></center>
+<h4><center><font size="4" face="calibri"><p>Hello and welcome to my cumulative portfolio for my Industrial Attachment at Gearbox, Kenya.The purpose of this portfolio is not only to display the projects that i have taken part in but also to show ho my skills have improved throughout my attachment period.Compared to the beginning of this attachment where I was always uestioning my ability to code as well as assemble simple projects and see their completion, I am now more confident in my skill set and I feel that i have undoubtedly improved.</p></font></center></h4>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="text">Engineer Anne</div>
+  <img src="Engineer Anne.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="text">Computer and Electronics</div>
+  <img src="Computer and Electronics.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="text">Robotics</div>
+  <img src="Robotics.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="text">Programming</div>
+  <img src="Programming.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="text">Beneficiaries</div>
+  <img src="Beneficiaries.jpg" style="width:100%">
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+</body>
+</html> 
